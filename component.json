@@ -1,0 +1,22 @@
+{
+    "name": "suit-form",
+    "repo": "suitcss/form",
+    "version": "0.0.0",
+    "styles": ["form.css"],
+    "dependencies": {
+        "necolas/normalize.css": "*"
+    },
+    "development": {
+        "suitcss/test": "*",
+        "suitcss/utils-dimension": "*",
+        "suitcss/utils-display": "*",
+        "suitcss/utils-offset": "*",
+        "suitcss/utils-state": "*",
+        "suitcss/utils-text": "*",
+        "suitcss/arrange": "*",
+        "suitcss/button": "*",
+        "suitcss/grid": "*"
+
+    },
+    "license": "MIT"
+}

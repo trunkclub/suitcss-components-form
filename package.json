@@ -1,0 +1,13 @@
+{
+  "name": "suit-form",
+  "private": true,
+  "description": "",
+  "version": "0.0.0",
+  "devDependencies": {
+    "csslint": ">=0.9.10",
+    "component": "*"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/csslint *.css"
+  }
+}

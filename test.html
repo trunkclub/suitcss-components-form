@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Form [component] - SUIT</title>
+<link rel="stylesheet" href="build/build.css">
+<style>
+    .Grid--withGutter {
+        margin: 0 -10px;
+    }
+
+    .Grid--withGutter > .Grid-cell {
+        padding: 0 10px;
+    }
+
+    .Grid--alignMiddle .Grid-cell {
+        vertical-align: middle;
+    }
+
+    #renders-fieldset {
+        outline: 1px solid red;
+    }
+</style>
+
+<div class="Test">
+    <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/form">Form</a> component tests</h1>
+
+    <h2 class="Test-describe">.Form</h2>
+    <h3 class="Test-it">renders descendant `fieldset` without any border, margin, or padding</h3>
+    <div class="Test-run" id="renders-fieldset">
+        <form class="Form">
+            <fieldset>Fieldset</fieldset>
+        </form>
+    </div>
+    <h3 class="Test-it">renders descendant `label`, `input`, `textarea`, and `select` elements as middle-aligned inline-blocks</h3>
+    <div class="Test-run">
+        <form class="Form">
+            <label>Label</label>
+            <input placeholder="Input">
+            <textarea>Textarea</textarea>
+            <select>
+                <option>Select</option>
+            </select>
+        </form>
+    </div>
+    <h3 class="Test-it">does something else</h3>
+    <div class="Test-run" id="">
+        <div class="Form"></div>
+    </div>
+
+    <h2 class="Test-describe">.Form-item</h2>
+    <h3 class="Test-it">does something else</h3>
+    <div class="Test-run" id="">
+        <div class="Form"></div>
+    </div>
+
+    <h2 class="Test-describe">.Form-input</h2>
+    <h3 class="Test-it">does something else</h3>
+    <div class="Test-run" id="">
+        <div class="Form"></div>
+    </div>
+
+    <h2 class="Test-describe">.Form-item--stacked</h2>
+    <h3 class="Test-it">does something else</h3>
+    <div class="Test-run" id="">
+        <div class="Form"></div>
+    </div>
+
+    <h2 class="Test-describe">.Form--inline</h2>
+    <h3 class="Test-it">does something else</h3>
+    <div class="Test-run" id="">
+        <form class="Form Form--inline">
+            <div class="Form-item">
+                <label class="u-isHiddenVisually" for="email1">Email</label>
+                <input class="Form-input" id="email1" type="email" placeholder="Email">
+            </div>
+
+            <div class="Form-item">
+                <label class="u-isHiddenVisually" for="password1">Password</label>
+                <input class="Form-input" id="password1" type="password" placeholder="Password">
+            </div>
+
+            <div class="Form-item">
+                <input id="remember1" type="checkbox">
+                <label for="remember1">Remember me</label>
+            </div>
+
+            <div class="Form-item">
+                <button type="submit" class="Button">Sign in</button>
+            </div>
+        </form>
+    </div>
+
+    <h2 class="Test-describe">.Form (requires Grid, Button, utils-dimension, utils-display, utils-text</h2>
+    <h3 class="Test-it">does something else</h3>
+    <div class="Test-run" id="">
+        <form class="Form">
+            <div class="Form-item">
+                <div class="Grid Grid--alignMiddle Grid--withGutter">
+                    <div class="Grid-cell u-size1of4 u-textRight">
+                        <label class="Form-label" for="name2">Choose username</label>
+                    </div>
+                    <div class="Grid-cell u-size3of4">
+                        <input class="Form-input" id="name2" placeholder="">
+                        <span class="u-inlineBlock">Too short</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Form-item">
+                <div class="Grid Grid--alignMiddle Grid--withGutter">
+                    <div class="Grid-cell u-size1of4 u-textRight">
+                        <label class="Form-label" for="password2">Password</label>
+                    </div>
+                    <div class="Grid-cell u-size3of4">
+                        <input class="Form-input" id="password2">
+                        <span class="u-inlineBlock">Very strong</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Form-item">
+                <div class="Grid Grid--alignMiddle Grid--withGutter">
+                    <div class="Grid-cell u-size1of4 u-textRight">
+                        <label class="Form-label" for="cat2">Pick a category</label>
+                    </div>
+                    <div class="Grid-cell u-size3of4">
+                        <select id="cat2">
+                            <option>Mustaches of the world</option>
+                            <option>Long lost music</option>
+                            <option>Interesting colours</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Form-item">
+                <div class="Grid Grid--alignMiddle Grid--withGutter">
+                    <div class="Grid-cell u-before1of4 u-size3of4">
+                        <input id="remember" type="checkbox">
+                        <label for="remember">Remember me</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Form-item">
+                <div class="Grid Grid--alignMiddle Grid--withGutter">
+                    <div class="Grid-cell u-before1of4 u-size3of4">
+                        <div class="u-inlineBlock">
+                            <button type="submit" class="Button">Sign up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <h2 class="Test-describe">.Form stacked (requires Button, utils-display)</h2>
+    <h3 class="Test-it">does something else</h3>
+    <div class="Test-run" id="">
+        <form class="Form">
+            <div class="Form-item Form-item--stacked">
+                <label class="Form-label" for="email3">Email</label>
+                <input class="Form-input" id="email3" type="email" placeholder="Email">
+                <span class="u-inlineBlock">Success and error message on the side when there is space</span>
+            </div>
+
+            <div class="Form-item Form-item--stacked">
+                <label class="Form-label" for="password3">Password</label>
+                <input class="Form-input" id="password3" type="password" placeholder="Password">
+                <div>Success and error message underneath</div>
+            </div>
+
+            <div class="Form-item Form-item--stacked">
+                <label class="Form-label" for="country3">Country</label>
+                <select id="country3">
+                    <option>UK</option>
+                    <option>US</option>
+                    <option>France</option>
+                </select>
+            </div>
+
+            <div class="Form-item Form-item--stacked">
+                <label class="Form-label" for="extra3">Additional details</label>
+                <textarea class="Form-input" id="extra3" placeholder="Your comment"></textarea>
+            </div>
+
+            <div class="Form-item">
+                <label>
+                    <input type="radio" name="radioname"> Yes
+                </label>
+                <label>
+                    <input type="radio" name="radioname"> No
+                </label>
+            </div>
+
+            <div class="Form-item">
+                <input type="checkbox" id="remember3">
+                <label for="remember3">Remember me</label>
+            </div>
+
+            <div class="Form-item">
+                <div class="u-inlineBlock">
+                    <button type="submit" class="Button">Sign in</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <h2 class="Test-describe">Full-width inputs (requires utils-dimension)</h2>
+    <h3 class="Test-it">does something else</h3>
+    <div class="Test-run" id="">
+        <div>
+            <input class="Form-input u-sizeFull" type="search" placeholder="Input 100% width">
+        </div>
+        <div>
+            <textarea class="Form-input u-sizeFull" placeholder="Textarea 100% width"></textarea>
+        </div>
+        <div>
+            <select class="u-sizeFull">
+                <option>A</option>
+            </select>
+        </div>
+    </div>
+
+    <h2 class="Test-describe">Proportional-width inputs (requires utils-dimension)</h2>
+    <h3 class="Test-it">does something else</h3>
+    <div class="Test-run" id="">
+        <div>
+            <input class="Form-input u-size1of2" placeholder="Input 50% width">
+        </div>
+        <div>
+            <input class="Form-input u-size1of3" placeholder="Input 33% width">
+        </div>
+        <div>
+            <input class="Form-input u-size1of4" placeholder="Input 25% width">
+        </div>
+    </div>
+
+    <h2 class="Test-describe">Mini form (requires utils-dimension, arrange, button)</h2>
+    <h3 class="Test-it">does something else</h3>
+    <div class="Test-run" id="">
+        <form class="Form" style="width: 300px;">
+            <div class="Form-item">
+                <label class="u-isHiddenVisually" for="email4">Username or email</label>
+                <input class="Form-input u-sizeFull" id="email4" placeholder="Username or email">
+            </div>
+            <div class="Form-item">
+                <div class="Arrange Arrange--withGutter Arrange--middle">
+                    <div class="Arrange-sizeFill">
+                        <label class="u-isHiddenVisually" for="password4">Password</label>
+                        <input class="Form-input u-sizeFull" id="password4" placeholder="Password">
+                    </div>
+                    <div class="Arrange-sizeFit">
+                        <button class="Button">Sign in</button>
+                    </div>
+                </div>
+            </div>
+            <div class="Form-item">
+                <input type="checkbox" id="remember4">
+                <label for="remember4">Remember me</label>
+                &middot;
+                <a href="#">Forgotten password</a>
+            </div>
+        </form>
+    </div>
+</div>
